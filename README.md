@@ -47,3 +47,13 @@
 1. Unity3D
 2. C#
 ### 負責工作內容相關Code
+- [船控制(BoatController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/BoatController.cs)
+- [Boss控制(BossController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/BossController.cs)
+- [遊戲結果控制(GameReasult.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/GameReasult.cs)
+- [物件控制(ObjectController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/ObjectController.cs)
+- [物件生成(ObjectCreate.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/ObjectCreate.cs)
+- [物件池(ObjectPool.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/ObjectPool.cs)
+- [角色控制(PlayerController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/PlayerController.cs)
+- [污漬控制(StainController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/StainController.cs)
+### 成果影片
+
