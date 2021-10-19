@@ -10,23 +10,6 @@ public class GameReasult : MonoBehaviour
     public Animator[] pbA;
     // Start is called before the first frame update
 
-
-    //private Transform player1_tra, player2_tra;
-    //public Transform player1EndPos_tra, player2EndPos_tra;//終點位置物件(外部放入用)
-    //private Vector3 player1EndPos, player2EndPos;//終點位置
-    //public float MoveEndSpeed = 10;
-    //private bool entetWin;
-    //private bool[] moveOver = new bool[2];
-
-    //IEnumerator Start()//Unity繼承MonoBehaviour除了內建的void Start還有IEnumerator
-    //{
-    //    yield return new WaitForSeconds(5);
-    //    player1_tra = gameData_Tennis.characterChange_scr.p1_ch_obj.transform;//暫存起來
-    //    player2_tra = gameData_Tennis.characterChange_scr.p2_ch_obj.transform;
-    //    player1EndPos = player1EndPos_tra.position;//position比localPosition更耗效能，暫存能減少消耗
-    //    player2EndPos = player2EndPos_tra.position;
-    //}
-
     void Update()
     {
         //if (!entetWin) { return; }
@@ -52,7 +35,7 @@ public class GameReasult : MonoBehaviour
         }
         foreach (var a in pbA)
         {
-            a.applyRootMotion = false;//還是沒加RRRRR
+            a.applyRootMotion = false;
             a.SetTrigger("Win");
         }
         gameData_Tennis.Common_scr.ShowSettlement(true);
