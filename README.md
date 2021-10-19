@@ -17,10 +17,16 @@
 2. C#
 3. makehuman
 ### 負責工作內容相關Code
-- A
-- 
-
-
-
-
-![image](《夢盡》/怪物生成與活動圖.png)
+- [角色控制(PlayerMove.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/PlayerMove.cs)
+- [角色控制(MoveController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/MoveController.cs)
+- [攻擊控制(AttackController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/AttackController.cs)
+- [防禦控制(BlockController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/BlockController.cs)
+- [角色武器切換(SwordSwitch.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/SwordSwitch.cs)
+- [武器揮動軌跡控制(WeaponTrailController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/WeaponTrailController.cs)
+- [怪物AI控制(goblin_DrawArc.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/goblin_DrawArc.cs)
+- [怪物AI控制(goblinAI.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/goblinAI.cs)
+- [怪物生成控制(MonsterBorn.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/MonsterBorn.cs)
+- [攝影機控制(CameraController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/CameraController.cs)
+- [攝影機跟隨控制(SmoothFollow.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/SmoothFollow.cs)
+### 成果影片
+[![image](《夢盡》/怪物生成與活動圖.png)](https://www.youtube.com/watch?v=tHVb6hr-dqk&t=4s)
