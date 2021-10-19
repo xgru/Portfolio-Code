@@ -1,5 +1,9 @@
-# Portfolio-Code
-## 體感遊戲---《夢盡》
+# Portfolio
+- [體感遊戲---《夢盡》](#41)
+- [超休閒小遊戲---《海賊七逃》](#42)
+- [影像式駕駛訓練模擬系統](#43)
+
+## <a id="41"/>體感遊戲---《夢盡》
 ### 研究目標
 針對下班後的休閒娛樂是靜態活動這項問題，本專題利用體感遊戲以下幾項特點：不會呆坐在螢幕前、全身性的活動、不須任何配戴性裝置，不會造成額外負擔，設計一款以體感為基礎的RPG小遊戲，希望能改善大家的休閒娛樂型態，讓大家在玩遊戲放鬆身心之餘，也能夠活動身體減少久坐帶來的危害。
 ### 專案特色
@@ -29,9 +33,10 @@
 - [攝影機控制(CameraController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/CameraController.cs)
 - [攝影機跟隨控制(SmoothFollow.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E5%A4%A2%E7%9B%A1%E3%80%8B/SmoothFollow.cs)
 ### 成果影片
-[![image](《夢盡》/怪物生成與活動圖.png)](https://www.youtube.com/watch?v=tHVb6hr-dqk&t=4s)
-
-## 超休閒小遊戲---《海賊七逃》
+[![怪物生成與活動圖.png](《夢盡》/怪物生成與活動圖.png)](https://www.youtube.com/watch?v=tHVb6hr-dqk&t=4s)
+---
+---
+## <a id="42"/>超休閒小遊戲---《海賊七逃》
 ### 研究目標
 以超休閒小遊戲為目標，訂定七款不同運動類型的雙人同樂小遊戲，兩個月時間程式美術製作，一個月整合、修改。
 ### 專案特色
@@ -56,9 +61,10 @@
 - [角色控制(PlayerController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/PlayerController.cs)
 - [污漬控制(StainController.cs)](https://github.com/xgru/Portfolio-Code/blob/main/%E3%80%8A%E6%B5%B7%E8%B3%8A%E4%B8%83%E9%80%83%E3%80%8B/StainController.cs)
 ### 成果影片
-[![image](《海賊七逃》/網球關卡.png)](https://youtu.be/_9xs03n6Z7s)
-
-## 影像式駕駛訓練模擬系統
+[![網球關卡.png](《海賊七逃》/網球關卡.png)](https://youtu.be/_9xs03n6Z7s)
+---
+---
+## <a id="43"/>影像式駕駛訓練模擬系統
 ### 研究目標
 考量到實際上路練習的危險性以及解決在傳統駕駛訓練班培訓所遇到的困擾因素，提供一項簡單便利、可自由進行多樣化駕駛訓練的模擬環境系統，以幫助駕駛員認識到自身的駕駛行為問題。
 ### 專案特色
@@ -70,7 +76,6 @@
 - [x] 將數據結果導入Unity3D中進行系統製作
 - [x] 訊息畫面顯示以及即時判別駕駛行為正確與否
 - [x] 統整並顯示所有錯誤駕駛行為時間與內容
-
 ### 負責工作
 全部
 ### 使用技術
@@ -81,5 +86,4 @@
 ### 負責工作內容相關Code
 無法提供
 ### 成果影片
-[![image](影像式駕駛模擬訓練系統.png)](https://www.youtube.com/watch?v=TRc1zp3r3j8)
-
+[![影像式駕駛模擬訓練系統.png](影像式駕駛模擬訓練系統.png)](https://www.youtube.com/watch?v=TRc1zp3r3j8)
