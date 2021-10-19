@@ -5,10 +5,10 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
     [Header("目前控制器")]
-    public PlayerControl_ScriptObject playerControl_scrObj;//優點可以通用腳本，缺點是外面要放
+    public PlayerControl_ScriptObject playerControl_scrObj;
     public static BoatController instance;
 
-    GameObject[] Boat,Boat2;//用搜索的會搜索到別人的船，順序會錯亂
+    GameObject[] Boat,Boat2;
     public GameObject win;
     //public GameObject All_player;
     ObjectPool OP;
@@ -35,7 +35,6 @@ public class BoatController : MonoBehaviour
 
         //Boat = GameObject.FindGameObjectsWithTag("Boat");
         //Boat2 = GameObject.FindGameObjectsWithTag("Boat2");
-        //直接把組件下方的所有物件挖出來比對~總會找到的www
         Transform[] _obj_array = gameObject.GetComponentsInChildren<Transform>();
         for (int i = 0; i < _obj_array.Length; i++)
         {
@@ -67,7 +66,7 @@ public class BoatController : MonoBehaviour
                 {
                     Move2();
                 }*/
-                if (gameObject.name.Contains("P"))//檢測文字內容是否有對應字段，這樣就不用用等於了
+                if (gameObject.name.Contains("P"))
                 {
                     Move();
                 }
@@ -97,16 +96,6 @@ public class BoatController : MonoBehaviour
         }
     }
 
-    ////1P.2P通用移動
-    //private enum MoveState
-    //{
-    //    walk,//走路
-    //    Run,//跑步
-    //}
-    //private MoveState moveState;
-
-    //Vector3 _v_movePos = Vector3.zero;
-    //Quaternion _roat = Quaternion.identity;
     private float _angle = 0;//旋轉角度
 
     void Move()
@@ -159,150 +148,10 @@ public class BoatController : MonoBehaviour
 
         //旋轉
         nowBoat.rotation = Quaternion.Lerp(nowBoat.rotation, Quaternion.Euler(0, _angle, 0), 0.3f);
-        //TwiceKeyDown_Timed_Update();
-        //switch (moveState)
-        //{
-        //    case MoveState.walk:
-        //        transform.Translate(_moveXpos, 0, _moveZpos);
-        //        break;
-        //    case MoveState.Run:
-        //        transform.Translate(_moveXpos * 2, 0, _moveZpos);
-        //        break;
-        //}
 
         transform.Translate(_moveXpos * _value, 0, _moveZpos * _value);
-        //Vector3 _newPos = new Vector3(_moveXpos * _value, 0, _moveZpos * _value);
-        //Vector3 _pos = transform.localPosition;
-        //Vector3 _endPos = new Vector3(_pos.x + _newPos.x, _pos.x + _newPos.y, _pos.z + _newPos.z);
-        //transform.localPosition = Vector3.Lerp(transform.localPosition, _endPos, 1);
+
     }
-    ////連續兩次按下相同方向鍵
-    ////private 
-    //private string nowKey;
-    //private int KeyDownCount = 0;
-    //private float nowWaitKeyDownTwiceTimed;//超過指定時間重置按下時間
-    //public float maxWaitKeyDownTwiceTimed = 1;
-    void TwiceKeyDown(string _newkey)
-    {
-    //    if (PlayerControl_koroshi.KeyDown(_newkey))
-    //    {
-    //        if (nowKey != _newkey)//更換鍵時
-    //        {
-    //            nowKey = _newkey;
-    //            KeyDownCount = 0;
-    //        }
-    //        KeyDownCount++;
-    //        if (KeyDownCount > 1)//連按N次後
-    //        {
-    //            moveState = MoveState.Run;
-    //        }
-    //    }
-    //}
-    ////計算重置跑步時間
-    //void TwiceKeyDown_Timed_Update()
-    //{
-    //    if (KeyDownCount > 1) { return; }
-    //    if (nowWaitKeyDownTwiceTimed < maxWaitKeyDownTwiceTimed)
-    //    {
-    //        nowWaitKeyDownTwiceTimed += Time.deltaTime;
-    //    }
-    //    else
-    //    {
-    //        KeyDownCount = 0;
-    //        nowWaitKeyDownTwiceTimed = 0;
-    //        moveState = MoveState.walk;
-    //    }
-    }
-
-    //void KeepKeyUP()
-    //{
-    //    bool _up = PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyUp);
-    //    bool _down = PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyDown);
-    //    bool _left = PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyLeft);
-    //    bool _right = PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyRight);
-
-    //    Debug.Log(_up + "/" + _down + "/" + _left + "/" + _right);
-
-    //    //if (PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyUp) && PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyDown) &&
-    //    //    PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyLeft) && PlayerControl_koroshi.KeyUp(playerControl_scrObj.keyRight))
-    //    if (_up && _down && _left && _right)
-    //    {
-    //        nowWaitKeyDownTwiceTimed = 0;
-    //        KeyDownCount = 0;
-    //        moveState = MoveState.walk;
-    //    }
-    //    //if (nowKey == _newkey && KeyDownCount > 1)
-    //}
-
-    /*
-    public void Move1()
-    {
-        if (Input.GetKey(KeyCode.W))
-        {
-            Boat[0].transform.rotation = Quaternion.Euler(0,0,0);
-            transform.Translate(Vector3.forward *OP.speed1 * Time.deltaTime);
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(1f, 0f, 0.1f));
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            Boat[0].transform.rotation = Quaternion.Euler(0, 180, 0);
-            transform.Translate(Vector3.back * OP.speed1 * Time.deltaTime);
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(-1f, 0f, 0.1f));
-        }
-        else
-        {
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(0f, 0f, 0.1f));
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            Boat[0].transform.rotation = Quaternion.Euler(0, -90, 0);
-            transform.Translate(Vector3.left * OP.speed1 * Time.deltaTime);
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(-2f, -1f, 0.1f));
-
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            Boat[0].transform.rotation = Quaternion.Euler(0, 90, 0);
-            transform.Translate(Vector3.right * OP.speed1 * Time.deltaTime);
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(2f, 1f, 0.1f));
-
-        }
-    }
-    public void Move2()
-    {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            Boat2[0].transform.rotation = Quaternion.Euler(0, 0, 0);
-            transform.Translate(Vector3.forward * OP.speed2 * Time.deltaTime);
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(1f, 0f, 0.1f));
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            Boat2[0].transform.rotation = Quaternion.Euler(0, 180, 0);
-            transform.Translate(Vector3.back * OP.speed2 * Time.deltaTime);
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(-1f, 0f, 0.1f));
-        }
-        else
-        {
-            //anim.SetFloat("moveSpeed_T", Mathf.Lerp(0f, 0f, 0.1f));
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            Boat2[0].transform.rotation = Quaternion.Euler(0, -90, 0);
-            transform.Translate(Vector3.left * OP.speed2 * Time.deltaTime);
-            // anim.SetFloat("moveSpeed_T", Mathf.Lerp(-2f, -1f, 0.1f));
-
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            Boat2[0].transform.rotation = Quaternion.Euler(0, 90, 0);
-            transform.Translate(Vector3.right * OP.speed2 * Time.deltaTime);
-            // anim.SetFloat("moveSpeed_T", Mathf.Lerp(2f, 1f, 0.1f));
-        }
-    }
-    */
 
     public void Result_Text()
     {
